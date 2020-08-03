@@ -30,6 +30,7 @@ dependencies:
   - numpy-base=1.19.1=py38hfa32c7d_0
   - openssl=1.1.1g=h7b6447c_0
   - pip=20.1.1=py38_1
+  - prometheus_client=0.8.0=py_0
   - python=3.8.3=hcff3b4d_2
   - readline=8.0=h7b6447c_0
   - scikit-learn=0.23.1=py38h423224d_0

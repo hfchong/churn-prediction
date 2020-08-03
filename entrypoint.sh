@@ -18,8 +18,9 @@ fi
 # Add Bedrock model server directory to path
 export PYTHONPATH="${PYTHONPATH:-}:/app"
 
-exec conda run -n production \
-     gunicorn \
+eval "$(conda shell.bash hook)"
+conda activate production
+exec gunicorn \
      --config gunicorn_config.py \
      --bind=:${BEDROCK_SERVER_PORT:-8080} \
      --worker-class=gthread \
