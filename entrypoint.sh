@@ -10,13 +10,9 @@ else
     exit 1
 fi
 
-EXTRA_OPTS=""
 if [ "$WORKERS" -gt 1 ]; then
     export prometheus_multiproc_dir="${prometheus_multiproc_dir:-/tmp}"
 fi
-
-# Add Bedrock model server directory to path
-export PYTHONPATH="${PYTHONPATH:-}:/app"
 
 eval "$(conda shell.bash hook)"
 conda activate production
