@@ -5,8 +5,8 @@ serve {
     image = "continuumio/miniconda3:latest"
     install = [
       "apt-get update && apt-get install -y build-essential",
+      "/opt/conda/bin/pip install bdrk[model-monitoring]==0.3.0",
       "conda env create -f production.yml",
-      "pip install --upgrade pip && pip install bdrk[model-monitoring]==0.3.0",
     ]
     script = [
         {sh = [
